@@ -15,7 +15,7 @@ window.addEventListener('scroll', _.throttle(function () {
     // 배지 숨기기 (기본)
     // badgeEl.style.display = 'none';
     // 배지 숨기기 (gsap animation 사용)
-    // gsap.to(요소, s시간, 옵션)
+    // gsap.to(요소, 지속시간(s), 옵션)
     gsap.to(badgeEl, .6, {
       opacity: 0,
       display: 'none'
@@ -54,6 +54,8 @@ toTopEl.addEventListener('click', function () {
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 // 이미지 animation 기능 추가
 // 나타날 요소들을 하나씩 반복해서 처리
+// index는 0부터 시작
+// gsap.to(요소, s애니메이션 효과시간, 옵션)
 fadeEls.forEach(function (fadeEl, index) {
   // 각 요소들을 순서대로(delay) 보여지게 함
   gsap.to(fadeEl, 1, {
