@@ -1,3 +1,12 @@
+/* position: absolute;인 요소를 정렬하는 방법
+
+부모 요소에 적용될 수 있도록 부모요소에 position을 지정해줘야한다(보통 relative)
+본인 요소에 수직 가운데 정렬을 원하면 본인 요소의 height를 알려주고, 기준점 top, bottom을 정한 뒤, margin: auto 0을 해주면 수직 가운데 정렬 된다.
+본인 요소에 수평 가운데 정렬을 원하면 본인 요소의 width를 알려주고, 기준점 left, right을 정한 뒤, margin: 0 auto를 해주면 수평 가운데 정렬 된다.
+
+*/
+
+
 /* COMMON */
 body {
   color: #333;
@@ -238,7 +247,7 @@ header .main-menu .item .item__contents .contents__menu > ul > li h4 {
   font-size: 14px;
   color: #fff;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li  ul {
+header .main-menu .item .item__contents .contents__menu > ul > li ul {
 
 }
 header .main-menu .item .item__contents .contents__menu > ul > li ul li {
@@ -349,6 +358,7 @@ footer .copyright {
   text-align: center;
   margin-top: 12px;
 }
+/* img가 block 인 경우 margin: 0 auto;이면 width 속성 없이도 가운데 정렬 */
 footer .logo {
   margin: 30px auto 0;
 }
